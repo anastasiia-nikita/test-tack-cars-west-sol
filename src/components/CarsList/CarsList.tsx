@@ -5,10 +5,20 @@ import { Car } from '../../react-app-env';
 import { getCars } from '../../api/cars';
 import { CarCard } from '../CarCard';
 import sortAsc from '../../images/sort asc.png';
-// import sortDes from '../../images/sort des.png';
+import sortDes from '../../images/sort des.png';
+
+// type SortByType = 'Publication date (ascending)'
+// | 'Publication date (descending)'
+// | 'Price (ascending)'
+// | 'Price (descending)'
+// | 'Mileage (ascending)'
+// | 'Mileage (descending)'
+// | 'Performance (ascending)'
+// | 'Performance (descending)';
 
 export const CarsList: React.FC = () => {
   const [cars, setCars] = useState<Car[]>([]);
+  const [sortBy, setSortBy] = useState('Publication date (ascending)');
 
   useEffect(() => {
     getCars()
@@ -16,10 +26,10 @@ export const CarsList: React.FC = () => {
   }, []);
 
   // eslint-disable-next-line no-console
-  console.log(cars);
+  console.log(sortBy);
 
   return (
-    <div className="App__cars-list cars-list container">
+    <div className="App__cars-list cars-list container" id="cars">
       <h2 className="cars-list__title">Current offers</h2>
 
       <div className="container cars-list__block">
@@ -88,29 +98,29 @@ export const CarsList: React.FC = () => {
       <div className="d-flex justify-content-between align-items-center cars-list__block">
         <div className="form-check">
           <label className="form-check-label cars-list__checkbox" htmlFor="flexCheckDefault">
-            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <input className="form-check-input cars-list__checkbox--checked" type="checkbox" value="" id="flexCheckDefault" />
             Instantly available vehicles
           </label>
         </div>
 
         <div className="cars-list__sort-by d-flex justify-content-between align-items-center">
           <p className="cars-list__sort-by-title">Sort by</p>
-          <img src={sortAsc} alt="sortAsc" width="13" height="13" />
-          {/* <img src={sortDes} alt="sortDes" width="13" height="13" /> */}
+          {sortBy.includes('ascending')
+            ? <img src={sortAsc} alt="sortAsc" width="13" height="13" />
+            : <img src={sortDes} alt="sortDes" width="13" height="13" />}
           <select
             className="form-select cars-list__sort-by-select"
-            // value={}
-            // {if option include des. то }
-            // onChange={}
+            value={sortBy}
+            onChange={(event) => setSortBy(event.target.value)}
           >
-            <option selected value="Publication date (ascending)">Publication date (ascending)</option>
-            <option value="Publication date (descending)">Publication date (descending)</option>
-            <option value="Price (ascending">Price (ascending)</option>
-            <option value="Price (descending">Price (descending)</option>
-            <option value="Mileage (ascending)">Mileage (ascending)</option>
-            <option value="Mileage (ascending)">Mileage (ascending)</option>
-            <option value="Performance (ascending)">Performance (ascending)</option>
-            <option value="Performance (descending)">Performance (descending)</option>
+            <option value="Publication date (ascending)">Publication date (ascending)</option>
+            <option>Publication date (descending)</option>
+            <option>Price (ascending)</option>
+            <option>Price (descending)</option>
+            <option>Mileage (ascending)</option>
+            <option>Mileage (ascending)</option>
+            <option>Performance (ascending)</option>
+            <option>Performance (descending)</option>
           </select>
         </div>
       </div>

@@ -2,14 +2,15 @@
 @import "custom";
 // @import './vars.scss';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  background-color: $backgroundColor;
 }
 
 .App {
+  background-color: $backgroundColor;
+
   &__header {
     height: 100vh;
     margin-bottom: 98px;

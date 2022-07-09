@@ -54,5 +54,10 @@
     &:active:focus {
       box-shadow: none;
     }
+
+    &:active {
+      background-color: $backgroundColor;
+      color: $textColor;
+    }
   }
 }

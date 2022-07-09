@@ -19,7 +19,7 @@ export const FormSubscribe: React.FC = () => (
           />
         </div>
         <div className="col-2">
-          <button className="btn btn-backgroundColor form-subscribe__button" type="submit">Subscribe now</button>
+          <button className="btn btn-backgroundColor form-subscribe__button" type="button">Subscribe now</button>
         </div>
       </div>
     </div>

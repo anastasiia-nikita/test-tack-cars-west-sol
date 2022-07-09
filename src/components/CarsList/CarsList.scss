@@ -62,11 +62,14 @@
       background-color: transparent;
     }
 
-    &:active, &:focus {
+    &:focus {
       color: $backgroundColor;
       background-color: $brandColor;
       box-shadow: none;
-      outline: none;
+    }
+
+    &:active:focus {
+      box-shadow: none;
     }
   }
 
@@ -75,6 +78,20 @@
     font-size: 12px;
     line-height: 16px;
     color: $textPossibleOption;
+
+    &--checked:focus {
+      box-shadow: none;
+    }
+
+    &--checked:checked {
+      background-color: $brandColor;
+      border-color: $brandColor;
+      color: $brandColor;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
   }
 
   &__sort-by-title {
@@ -98,13 +115,25 @@
     padding-left: 0;
     border: 0;
 
-    &:hover {
-      color: $brandColor;
-    }
+    // &:hover {
+    //   color: $brandColor;
+    // }
 
     &:focus {
       border-color: transparent;
       box-shadow: none;
     }
+
+    // &__option:hover {
+    //     color: $brandColor;
+    //   }
   }
 }
+
+// select > option:hover {
+//   color: $brandColor;
+// }
+
+// .cars-list__sort-by-select > option.cars-list__sort-by-select__option:hover {
+//   color: $brandColor;
+// }

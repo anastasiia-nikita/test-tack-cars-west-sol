@@ -29,9 +29,13 @@
     border: 2px solid #F8F8F8;
     border-radius: 15px;
 
-    &:active, &:focus {
+    &:focus {
       background-color: transparent;
       color: $backgroundColor;
+      box-shadow: none;
+    }
+
+    &:focus:active {
       box-shadow: none;
     }
   }

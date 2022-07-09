@@ -1,0 +1,50 @@
+@import '../../vars.scss';
+
+.car-card {
+  &:hover .car-card__title {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__body {
+    padding: 20px 20px 35px;
+
+    &--nonactive {
+      opacity: 0.5;
+    }
+  }
+
+  &__year {
+    display: inline-block;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: $textPossibleOption;
+    padding-right: 8px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: $textColor;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: $textPossibleOption;
+    margin-bottom: 26px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: $textColor;
+    margin: 0;
+  }
+}
