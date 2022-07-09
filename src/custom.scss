@@ -1,0 +1,15 @@
+@import './vars.scss';
+
+$custom-colors: (
+  "textColor": $textColor,
+  "backgroundColor": $backgroundColor,
+  "brandColor": $brandColor,
+  "H2Option": $H2Option,
+  "textPossibleOption": $textPossibleOption,
+  "validationColor": $validationColor,
+  "errorColor": $errorColor,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "~bootstrap/scss/bootstrap";

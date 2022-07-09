@@ -1,0 +1,39 @@
+@import '../../vars.scss';
+
+.form-subscribe {
+  background-color: $textColor;
+
+  &__block {
+    padding: 40px 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    color: $backgroundColor;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: $backgroundColor;
+  }
+
+  &__input {
+    height: 54px;
+    border-radius: 15px;
+    background-color: transparent;
+  }
+
+  &__button {
+    height: 54px;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+// @import '../../custom.scss';
+@import '../../vars.scss';
+
+.navigation {
+  padding: 19px 0 200px 0;
+
+  @media (max-width: 576px) {
+    padding-bottom: 100px;;
+  }
+
+  &__link {
+    color: $backgroundColor;
+    font-weight: 500;
+
+    &:hover, &:focus {
+      color: $backgroundColor;
+    }
+  }
+}

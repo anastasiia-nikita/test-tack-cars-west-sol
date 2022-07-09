@@ -1,0 +1,110 @@
+@import '../../vars.scss';
+
+.cars-list {
+  &__block {
+    margin-bottom: 24px;
+  }
+
+  &__col {
+    padding: 0 20px 0 0;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+
+    text-transform: uppercase;
+    text-align: center;
+    color: $H2Option;
+    margin-bottom: 80px;
+  }
+
+  &__select {
+    border-radius: 15px;
+    height: 48px;
+    color: $textColor;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+
+    &:focus {
+      border-color: #ced4da;
+      box-shadow: none;
+    }
+
+    // ???????
+    &:target {
+      border-color: red;
+    }
+
+    // &__option {
+    //   color: $H2Option;
+    // }
+  }
+
+  &__button {
+    color: $backgroundColor;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 15px;
+    height: 48px;
+    width: 100%;
+
+    &:hover {
+      color: $brandColor;
+      background-color: transparent;
+    }
+
+    &:active, &:focus {
+      color: $backgroundColor;
+      background-color: $brandColor;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &__checkbox {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $textPossibleOption;
+  }
+
+  &__sort-by-title {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: $textColor;
+      margin: 0;
+      padding: 0 20px 0 0;
+      width: 80px;
+  }
+
+  &__sort-by-select {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    color: $textPossibleOption;
+    height: 30px;
+    padding-left: 0;
+    border: 0;
+
+    &:hover {
+      color: $brandColor;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
