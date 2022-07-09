@@ -1,25 +1,26 @@
 import React from 'react';
-import './Navigation.scss';
+// import { Navigation } from '../Navigation';
+import './Footer.scss';
 import logo from '../../images/logo (Traced).png';
 import instagramLogo from '../../images/instagram_logo.png';
 import facebookLogo from '../../images/facebook_logo.png';
 
-export const Navigation: React.FC = () => (
-  <nav className="navbar navigation">
-    <div className="container justify-content-between">
-      <a
-        className="navbar-brand"
-        href="#home"
-      >
-        <img
-          src={logo}
-          alt="logoMonza"
-          width="139"
-          height="35"
-        />
-      </a>
+export const Footer: React.FC = () => (
+  <footer className="footer">
+    <nav className="navbar navigation--footer">
+      <div className="container justify-content-between">
+        <a
+          className="navbar-brand"
+          href="#home"
+        >
+          <img
+            src={logo}
+            alt="logoMonza"
+            width="139"
+            height="35"
+          />
+        </a>
 
-      <div className="d-flex justify-content-center align-items-center gap-5">
         <ul className="nav">
           <li className="nav-item">
             <a className="nav-link navigation__link" href="#inventory">Inventory</a>
@@ -49,8 +50,7 @@ export const Navigation: React.FC = () => (
             <img src={instagramLogo} alt="instagramLogo" />
           </a>
         </div>
-
       </div>
-    </div>
-  </nav>
+    </nav>
+  </footer>
 );

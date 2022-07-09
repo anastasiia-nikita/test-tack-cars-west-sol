@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { CarsList } from './components/CarsList';
+import { Footer } from './components/Footer';
 import { FormSubscribe } from './components/FormSubscribe';
 import { Header } from './components/Header';
 import { Questions } from './components/Questions';
@@ -16,6 +17,7 @@ export const App: React.FC = () => {
         <Questions />
       </main>
 
+      <Footer />
     </div>
   );
 };

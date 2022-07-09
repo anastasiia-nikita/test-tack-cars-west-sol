@@ -26,6 +26,11 @@
     height: 54px;
     border-radius: 15px;
     background-color: transparent;
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
   }
 
   &__button {
@@ -35,5 +40,19 @@
     font-size: 15px;
     line-height: 20px;
     width: 100%;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid #F8F8F8;
+      color: $backgroundColor;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:active:focus {
+      box-shadow: none;
+    }
   }
 }

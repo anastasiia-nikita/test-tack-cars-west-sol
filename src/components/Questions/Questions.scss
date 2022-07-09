@@ -1,0 +1,63 @@
+@import '../../vars.scss';
+
+.questions {
+  &__title {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+
+    text-transform: uppercase;
+    color: $H2Option;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__accordion-header {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    color: $textColor;
+
+    &::after {
+      background-image: url(../../images/plus.png);
+      background-size: cover;
+      background-position: center;
+      width: 11px;
+      height: 11px;
+    }
+
+    &:not(.collapsed) {
+      color: $brandColor;
+      background-color: transparent;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 23px;
+
+      &::after {
+        background-image: url(../../images/minus.png);
+        background-size: cover;
+        background-position: center;
+        width: 11px;
+        height: 2px;
+      }
+    }
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  &__accordion-body {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    color: $textColor;
+    padding-right: 5rem;
+  }
+
+  &__accordion-collapse {
+    box-shadow: 0px 0px 18px rgba(68, 68, 68, 0.09);
+  }
+}

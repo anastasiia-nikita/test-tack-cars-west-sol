@@ -20,7 +20,7 @@ export const CarsList: React.FC = () => {
 
   return (
     <div className="App__cars-list cars-list container">
-      <h1 className="cars-list__title">Current offers</h1>
+      <h2 className="cars-list__title">Current offers</h2>
 
       <div className="container cars-list__block">
         <div className="row">
