@@ -19,7 +19,7 @@
     "transmission": "Automatic",
     "engines": "Gas",
     "price": "27,875",
-    "photo": "./images/cars/Toyota Highlander XLE.png"
+    "photo": "./images/cars/Toyota Highlander XLE NEW.png"
   },
   {
     "id": 3,
@@ -74,18 +74,18 @@
     "transmission": "Automatic",
     "engines": "Gas",
     "price": "18,620",
-    "photo": "./images/cars/Toyota Venza AWD XLE....png"
+    "photo": "./images/cars/Toyota Venza AWD XLE... SOLD.png"
   },
   {
     "id": 8,
-    "brand": "Lexus RX",
+    "brand": "Lexus",
     "year": 2016,
-    "model": "350 F-SPORT",
+    "model": "RX 350 F-SPORT",
     "race": "86,000",
     "transmission": "Automatic",
     "engines": "Gas",
     "price": "34,888",
-    "photo": "./images/cars/Lexus RX 350 F-SPORT.png"
+    "photo": "./images/cars/Lexus RX 350 F-SPORT NEW.png"
   },
   {
     "id": 9,
@@ -140,7 +140,7 @@
     "transmission": "Automatic",
     "engines": "Diesel",
     "price": "34,888",
-    "photo": "./images/cars/Volkswagen Tiguan.png"
+    "photo": "./images/cars/Volkswagen Tiguan NEW.png"
   },
   {
     "id": 14,
@@ -210,14 +210,14 @@
   },
   {
     "id": 20,
-    "brand": "Lexus RX",
+    "brand": "Lexus",
     "year": 2016,
-    "model": "350 F-SPORT",
+    "model": "RX 350 F-SPORT",
     "race": "86,000",
     "transmission": "Automatic",
     "engines": "Gas",
     "price": "34,888",
-    "photo": "./images/cars/Lexus RX 350 F-SPORT.png"
+    "photo": "./images/cars/Lexus RX 350 F-SPORT NEW.png"
   },
   {
     "id": 21,
