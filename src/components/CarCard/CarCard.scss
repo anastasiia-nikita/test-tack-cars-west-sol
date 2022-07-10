@@ -1,9 +1,12 @@
-@import '../../vars.scss';
+@import '../../utils/vars';
 
 .car-card {
+  &:hover {
+    cursor: pointer;
+  }
+
   &:hover .car-card__title {
     text-decoration: underline;
-    cursor: pointer;
   }
 
   &__body {
@@ -11,6 +14,7 @@
 
     &--nonactive {
       opacity: 0.5;
+      cursor: default;
     }
   }
 

@@ -1,4 +1,4 @@
-@import '../../vars.scss';
+@import '../../utils/vars';
 
 .form-subscribe {
   background-color: $textColor;
@@ -26,11 +26,16 @@
     height: 54px;
     border-radius: 15px;
     background-color: transparent;
+    color: $backgroundColor;
 
     &:focus {
       border-color: transparent;
       box-shadow: none;
     }
+  }
+
+  &__invalid {
+    margin-bottom: -25px;
   }
 
   &__button {

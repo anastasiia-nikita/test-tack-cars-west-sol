@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "custom";
-// @import './vars.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -28,31 +28,4 @@ body {
     margin-bottom: 150px;
   }
 }
-
-// nav a.nav-link {
-//   font-weight: 500;
-//   font-size: 15px;
-//   line-height: 20px;
-//   // color: var(--backgroundColor);
-//   color: $backgroundColor;
-
-//   &:hover, &:focus {
-//     color: var(--backgroundColor);
-//   }
-// }
-
-// h1.header__text-title {
-//   font-weight: 700;
-//   font-size: 50px;
-//   line-height: 68px;
-//   color: var(--backgroundColor);
-//   margin-bottom: 32px;
-// }
-
-// button.header__button:active, button.header__button:focus {
-//   background-color: transparent;
-//   border: 2px solid #F8F8F8;
-//   color: var(--backgroundColor);
-//   box-shadow: none;
-// }
 

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './CarsList.scss';
+import classnames from 'classnames';
 // eslint-disable-next-line import/extensions, import/no-unresolved
 import { Car } from '../../react-app-env';
 import { getCars } from '../../api/cars';
@@ -7,26 +8,30 @@ import { CarCard } from '../CarCard';
 import sortAsc from '../../images/sort asc.png';
 import sortDes from '../../images/sort des.png';
 
-// type SortByType = 'Publication date (ascending)'
-// | 'Publication date (descending)'
-// | 'Price (ascending)'
-// | 'Price (descending)'
-// | 'Mileage (ascending)'
-// | 'Mileage (descending)'
-// | 'Performance (ascending)'
-// | 'Performance (descending)';
+type SortByType = 'Publication date (ascending)'
+| 'Publication date (descending)'
+| 'Price (ascending)'
+| 'Price (descending)'
+| 'Mileage (ascending)'
+| 'Mileage (descending)'
+| 'Performance (ascending)'
+| 'Performance (descending)';
 
 export const CarsList: React.FC = () => {
   const [cars, setCars] = useState<Car[]>([]);
-  const [sortBy, setSortBy] = useState('Publication date (ascending)');
+  const [carMake, setCarMake] = useState('');
+  const [sortBy, setSortBy] = useState<SortByType>('Publication date (ascending)');
 
   useEffect(() => {
     getCars()
       .then(allCars => setCars(allCars));
   }, []);
 
-  // eslint-disable-next-line no-console
-  console.log(sortBy);
+  const visibleCars = useMemo(() => {
+    return cars.filter(car => (
+      car.brand.includes(carMake)
+    ));
+  }, [cars, carMake]);
 
   return (
     <div className="App__cars-list cars-list container" id="cars">
@@ -37,25 +42,28 @@ export const CarsList: React.FC = () => {
           <div className="col cars-list__col">
             <select
               className="form-select cars-list__select"
-              // value={}
-              // onChange={}
             >
-              <option className="cars-list__select__option" value="0" selected disabled>Year</option>
-              {cars.map(car => (
-                <option key={car.id} value={car.year}>{car.year}</option>
-              ))}
+              <option selected disabled>Year</option>
             </select>
           </div>
 
           <div className="col cars-list__col">
             <select
-              className="form-select cars-list__select"
-              // value={}
-              // onChange={}
+              className={classnames('form-select', 'cars-list__select', {
+                'cars-list__select--selected': carMake,
+              })}
+              value={carMake}
+              onChange={(event) => setCarMake(event.target.value)}
             >
-              <option value="0" selected disabled>Make</option>
+              <option value="">Make</option>
               {cars.map(car => (
-                <option key={car.id} value={car.id}>{car.brand}</option>
+                <option
+                  className="cars-list__select__option"
+                  key={car.id}
+                  value={car.brand}
+                >
+                  {car.brand}
+                </option>
               ))}
             </select>
           </div>
@@ -89,7 +97,7 @@ export const CarsList: React.FC = () => {
               type="button"
               className="btn btn-brandColor btn-lg cars-list__button"
             >
-              40 cars
+              {`${visibleCars.length} cars`}
             </button>
           </div>
         </div>
@@ -99,7 +107,7 @@ export const CarsList: React.FC = () => {
         <div className="form-check">
           <label className="form-check-label cars-list__checkbox" htmlFor="flexCheckDefault">
             <input className="form-check-input cars-list__checkbox--checked" type="checkbox" value="" id="flexCheckDefault" />
-            Instantly available vehicles
+            <p className="cars-list__checkbox__text">Instantly available vehicles</p>
           </label>
         </div>
 
@@ -111,9 +119,9 @@ export const CarsList: React.FC = () => {
           <select
             className="form-select cars-list__sort-by-select"
             value={sortBy}
-            onChange={(event) => setSortBy(event.target.value)}
+            onChange={(event) => setSortBy(event.target.value as SortByType)}
           >
-            <option value="Publication date (ascending)">Publication date (ascending)</option>
+            <option>Publication date (ascending)</option>
             <option>Publication date (descending)</option>
             <option>Price (ascending)</option>
             <option>Price (descending)</option>
@@ -127,7 +135,7 @@ export const CarsList: React.FC = () => {
 
       <div className="container">
         <div className="row g-3">
-          {cars.map(car => (
+          {visibleCars.map(car => (
             <CarCard key={car.id} car={car} />
           ))}
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Navigation } from '../Navigation';
 import './Footer.scss';
 import logo from '../../images/logo (Traced).png';
 import instagramLogo from '../../images/instagram_logo.png';

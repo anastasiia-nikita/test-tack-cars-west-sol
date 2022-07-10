@@ -1,4 +1,4 @@
-@import '../../vars.scss';
+@import '../../utils/vars';
 
 .cars-list {
   &__block {
@@ -33,19 +33,22 @@
     font-size: 15px;
     line-height: 20px;
 
+    &--selected {
+      border-color: $brandColor;
+
+      &:focus {
+        border-color: $brandColor;
+      }
+    }
+
     &:focus {
-      border-color: #ced4da;
+      border-color: $brandColor;
       box-shadow: none;
     }
 
-    // ???????
-    &:target {
-      border-color: red;
+    &__option:checked {
+      color: $brandColor;
     }
-
-    // &__option {
-    //   color: $H2Option;
-    // }
   }
 
   &__button {
@@ -92,6 +95,10 @@
         box-shadow: none;
       }
     }
+
+    &--checked:checked ~ .cars-list__checkbox__text {
+      color: $brandColor;
+    }
   }
 
   &__sort-by-title {
@@ -115,25 +122,9 @@
     padding-left: 0;
     border: 0;
 
-    // &:hover {
-    //   color: $brandColor;
-    // }
-
     &:focus {
       border-color: transparent;
       box-shadow: none;
     }
-
-    // &__option:hover {
-    //     color: $brandColor;
-    //   }
   }
 }
-
-// select > option:hover {
-//   color: $brandColor;
-// }
-
-// .cars-list__sort-by-select > option.cars-list__sort-by-select__option:hover {
-//   color: $brandColor;
-// }
