@@ -1,9 +1,7 @@
-# React TypeScript Starter Pack
+# Tesk task for West Solutions
 
-To use this template click `Use this template`
+### Links
 
-### Available Scripts
+➡️ [DEMO LINK](https://anastasiia-nikita.github.io/test-tack-cars-west-sol/)
 
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+➡️ [Figma design](https://www.figma.com/file/UlBnJHOSYkW4KEPwusZfNQ/Test-task?node-id=1%3A93)
