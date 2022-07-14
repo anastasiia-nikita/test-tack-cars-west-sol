@@ -1,12 +1,15 @@
 # Tesk task for West Solutions
 
 This repository is demonstrated a possible solution of visualization of the layout design of the Monza Motorsport.
+
 ➡️ [DEMO LINK](https://anastasiia-nikita.github.io/test-tack-cars-west-sol/)
+
 ➡️ [Figma design](https://www.figma.com/file/UlBnJHOSYkW4KEPwusZfNQ/Test-task?node-id=1%3A93)
 
 ## Description
 
-In order to create this project, I have used React, Bootstrap and SCSS. Implemented the ability to filter cars by the Make property.
+In order to create this project, I have used React, Bootstrap and SCSS. 
+Implemented the ability to filter cars by the Make property.
 
 ## Local development
 
