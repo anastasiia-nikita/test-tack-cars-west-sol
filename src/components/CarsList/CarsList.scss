@@ -5,14 +5,6 @@
     margin-bottom: 24px;
   }
 
-  &__col {
-    padding: 0 20px 0 0;
-
-    &:last-child {
-      padding: 0;
-    }
-  }
-
   &__title {
     font-family: 'Poppins';
     font-weight: 700;
@@ -101,6 +93,10 @@
     }
   }
 
+  &__sort-by {
+    padding-left: 20px;
+  }
+
   &__sort-by-title {
       display: inline-block;
       font-weight: 400;
@@ -121,10 +117,15 @@
     height: 30px;
     padding-left: 0;
     border: 0;
+    width: max-content;
 
     &:focus {
       border-color: transparent;
       box-shadow: none;
     }
   }
+}
+
+.form-check {
+  padding-left: 40px;
 }

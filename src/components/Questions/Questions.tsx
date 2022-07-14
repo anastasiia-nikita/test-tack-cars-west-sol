@@ -6,7 +6,7 @@ export const Questions: React.FC = () => (
     <h2 className="questions__title">Popular questions</h2>
 
     <div className="row justify-content-center">
-      <div className="col-8">
+      <div className="col-sm-12 col-lg-8">
         <div className="questions__accordion-block accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item">
             <h2 className="accordion-header" id="flush-headingOne">

@@ -12,8 +12,8 @@ export const FormSubscribe: React.FC = () => {
   return (
     <div className="App__form-subscribe form-subscribe">
       <div className="container">
-        <div className="row d-flex align-items-center form-subscribe__block">
-          <div className="col-5">
+        <div className="row gx-3 d-flex align-items-center form-subscribe__block">
+          <div className="col-lg-5">
             <h2 className="form-subscribe__title">Haven&apos;t found a suitable vehicle?</h2>
             <p className="form-subscribe__subtitle m-0">
               Sign up for our newsletter and be the first to know when
@@ -21,10 +21,10 @@ export const FormSubscribe: React.FC = () => {
             </p>
           </div>
 
-          <div className="col">
+          <div className="col-lg">
             <div className="row">
               <form
-                className="row d-flex align-items-center"
+                className="row g-2 d-flex align-items-center"
                 onSubmit={(event) => {
                   event.preventDefault();
                   setWasValidate(true);
@@ -36,7 +36,7 @@ export const FormSubscribe: React.FC = () => {
                   }
                 }}
               >
-                <div className="col-8">
+                <div className="col-sm-8">
                   <input
                     className={classnames('form-control', 'form-subscribe__input', {
                       'form-subscribe__input': !wasValidate && !formError,
@@ -60,7 +60,7 @@ export const FormSubscribe: React.FC = () => {
                   )}
                 </div>
 
-                <div className="col-4">
+                <div className="col-sm-4">
                   <button
                     className="btn btn-backgroundColor form-subscribe__button col-6"
                     type="submit"

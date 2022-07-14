@@ -38,8 +38,8 @@ export const CarsList: React.FC = () => {
       <h2 className="cars-list__title">Current offers</h2>
 
       <div className="container cars-list__block">
-        <div className="row">
-          <div className="col cars-list__col">
+        <div className="row g-3">
+          <div className="col-sm-6 col-md-4 col-xl cars-list__col">
             <select
               className="form-select cars-list__select"
             >
@@ -47,7 +47,7 @@ export const CarsList: React.FC = () => {
             </select>
           </div>
 
-          <div className="col cars-list__col">
+          <div className="col-sm-6 col-md-4 col-xl cars-list__col">
             <select
               className={classnames('form-select', 'cars-list__select', {
                 'cars-list__select--selected': carMake,
@@ -68,7 +68,7 @@ export const CarsList: React.FC = () => {
             </select>
           </div>
 
-          <div className="col cars-list__col">
+          <div className="col-sm-6 col-md-4 col-xl cars-list__col">
             <select
               className="form-select cars-list__select"
             >
@@ -76,7 +76,7 @@ export const CarsList: React.FC = () => {
             </select>
           </div>
 
-          <div className="col cars-list__col">
+          <div className="col-sm-6 col-md-4 col-xl cars-list__col">
             <select
               className="form-select cars-list__select"
             >
@@ -84,7 +84,7 @@ export const CarsList: React.FC = () => {
             </select>
           </div>
 
-          <div className="col cars-list__col">
+          <div className="col-sm-6 col-md-4 col-xl cars-list__col">
             <select
               className="form-select cars-list__select"
             >
@@ -92,7 +92,7 @@ export const CarsList: React.FC = () => {
             </select>
           </div>
 
-          <div className="col-3 cars-list__col">
+          <div className="col-sm-6 col-md-4 col-xl-3 cars-list__col">
             <button
               type="button"
               className="btn btn-brandColor btn-lg cars-list__button"
@@ -103,15 +103,15 @@ export const CarsList: React.FC = () => {
         </div>
       </div>
 
-      <div className="d-flex justify-content-between align-items-center cars-list__block">
-        <div className="form-check">
+      <div className="row d-flex justify-content-between align-items-center cars-list__block">
+        <div className="col-sm-6 col-md-4 form-check">
           <label className="form-check-label cars-list__checkbox" htmlFor="flexCheckDefault">
             <input className="form-check-input cars-list__checkbox--checked" type="checkbox" value="" id="flexCheckDefault" />
             <p className="cars-list__checkbox__text">Instantly available vehicles</p>
           </label>
         </div>
 
-        <div className="cars-list__sort-by d-flex justify-content-between align-items-center">
+        <div className="col-sm-6 col-md-5 col-xl-3 cars-list__sort-by d-flex justify-content-start align-items-center">
           <p className="cars-list__sort-by-title">Sort by</p>
           {sortBy.includes('ascending')
             ? <img src={sortAsc} alt="sortAsc" width="13" height="13" />
